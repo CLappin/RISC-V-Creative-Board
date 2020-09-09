@@ -26,41 +26,47 @@
 # 
 
 
-set_io {GPIO_IN[0]}   \
+# -- User PushButtons I/O -- #
+
+set_io {PUSH_BTN_1}   \
     -pinname H12      \
     -fixed yes        \
     -DIRECTION INPUT
 
 
-set_io {GPIO_IN[1]}   \
+set_io {PUSH_BTN_2}   \
     -pinname H13      \
     -fixed yes        \
     -DIRECTION INPUT
 
 
-set_io {GPIO_OUT[0]}   \
+# -- LEDs I/O --#
+
+set_io {LED_1}   \
     -pinname K16       \
     -fixed yes         \
     -DIRECTION OUTPUT
 
 
-set_io {GPIO_OUT[1]}   \
+set_io {LED_2}   \
     -pinname M16       \
     -fixed yes         \
     -DIRECTION OUTPUT
 
 
-set_io {GPIO_OUT[2]}   \
+set_io {LED_3}   \
     -pinname J16       \
     -fixed yes         \
     -DIRECTION OUTPUT
 
 
-set_io {GPIO_OUT[3]}   \
+set_io {LED_4}   \
     -pinname N16       \
     -fixed yes         \
     -DIRECTION OUTPUT
 
+
+# -- UART RX/TX -- #
 
 set_io RX             \
     -pinname H3       \
@@ -73,12 +79,6 @@ set_io TX              \
     -fixed yes         \
     -DIRECTION OUTPUT
 
-# Unused Constraints
-# set_io CLK0_PAD       \
-    # -pinname H16      \
-    # -fixed yes        \
-    # -DIRECTION INPUT
-	
 	
 # 
 # Dedicated Peripheral I/O Settings
@@ -91,3 +91,8 @@ set_io TX              \
 # the other listed attributes have been applied
 # 
 
+# Unused Constraints
+# set_io CLK0_PAD       \
+    # -pinname H16      \
+    # -fixed yes        \
+    # -DIRECTION INPUT
